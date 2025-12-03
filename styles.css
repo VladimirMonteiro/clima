@@ -1,0 +1,211 @@
+/* ---------------------------------------------------
+   GLOBAL
+--------------------------------------------------- */
+* {
+  transition: background-color .3s ease, color .3s ease, border .3s ease;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  line-height: 1.55;
+}
+
+/* ---------------------------------------------------
+   TEMAS
+--------------------------------------------------- */
+body.light {
+  background: #eef1f5;
+  color: #1a1a1a;
+}
+
+body.dark {
+  background: #0f0f0f;
+  color: #f2f2f2;
+}
+
+body.dark a, body.dark p, body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  color: #4da3ff;
+}
+
+/* ---------------------------------------------------
+   NAVBAR
+--------------------------------------------------- */
+.navbar {
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 12px rgba(0,0,0,.15);
+  padding: 14px 20px;
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------
+   CONTAINERS GERAIS
+--------------------------------------------------- */
+.container {
+  max-width: 1100px;
+}
+
+/* ---------------------------------------------------
+   CARDS GERAIS
+--------------------------------------------------- */
+.card {
+  border-radius: 18px !important;
+  border: none !important;
+  padding: 10px 5px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0,0,0,.1);
+}
+
+body.dark .card {
+  background: #1b1b1b !important;
+  box-shadow: 0 4px 14px rgba(255,255,255,.05);
+}
+
+/* Títulos */
+.card-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* ---------------------------------------------------
+   INPUTS & BUTTONS
+--------------------------------------------------- */
+input.form-control {
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 1.08rem;
+  border: 2px solid #d6d6d6;
+  background: #ffffff;
+}
+
+input.form-control:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 .15rem rgba(13,110,253,.2);
+}
+
+body.dark input.form-control {
+  background: #101010;
+  color: white;
+  border-color: #333;
+}
+
+button.btn-lg {
+  border-radius: 14px;
+  font-size: 1.1rem;
+  padding: 12px;
+}
+
+#geoBtn {
+  font-size: 1.1rem;
+}
+
+/* ---------------------------------------------------
+   CARDS DOS 5 DIAS
+--------------------------------------------------- */
+.day-card {
+  background: linear-gradient(145deg, #ffffff, #e9eef3);
+  border-radius: 18px;
+  padding: 18px;
+  text-align: center;
+  box-shadow: 0 5px 14px rgba(0,0,0,.1);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.day-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.day-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: yellow;
+}
+
+.day-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+  letter-spacing: .5px;
+}
+
+.temp-max {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #0d6efd;
+}
+
+.temp-min {
+  color: #6c757d;
+}
+
+body.dark .day-card {
+  background: linear-gradient(145deg, #1a1a1a, #161616);
+  box-shadow: 0 5px 14px rgba(255,255,255,.05);
+}
+
+body.dark .temp-max {
+  color: #4da3ff;
+}
+
+/* ---------------------------------------------------
+   GRÁFICOS
+--------------------------------------------------- */
+canvas {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,.08);
+}
+
+body.dark canvas {
+  background: #151515;
+  box-shadow: 0 4px 14px rgba(255,255,255,.05);
+}
+
+/* Gradiente nos gráficos (quando suportado) */
+.chartjs-render-monitor {
+  border-radius: 14px;
+}
+
+/* ---------------------------------------------------
+   ANIMAÇÕES
+--------------------------------------------------- */
+.fade-in {
+  animation: fadeIn .6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------------
+   RESPONSIVIDADE
+--------------------------------------------------- */
+@media (max-width: 768px) {
+  .day-card {
+    padding: 16px;
+  }
+
+  .day-icon {
+    font-size: 34px;
+  }
+
+  .day-title {
+    font-size: 1rem;
+  }
+
+  .temp-max {
+    font-size: 1.15rem;
+  }
+}
